@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital@1&display=swap');
+* {
+    font-family: Barlow;
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: Barlow;
+    background-color: rgb(31, 53, 124);
+    overflow-x: hidden;
+}
+.mydivs {
+    height: 100vh;
+    overflow: hidden;
+}
+#btn1, #btn2, #btn3, #btn4 {
+    visibility: hidden;
+    position: absolute;
+}
+.arrowDown::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    margin: auto;
+    top: 40rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-right: 4px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+.arrowUp::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    margin: auto;
+    top: 40rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-top: 4px solid rgba(255, 255, 255, 0.3);
+    border-left: 4px solid rgba(255, 255, 255, 0.3);
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+#div1 {
+    background-color: rgb(48, 69, 138);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+#div1 h1 {
+    margin: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: 1.8rem;
+}
+#div1 i , #div1 p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    line-height: 2;
+    letter-spacing: 0.5;
+
+}
+.imgdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.imgdiv div {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.imgdiv div img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+#div2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    background-image: url(img/computer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#div2 div {
+    background-color: rgba(37, 60, 134, 0.2);
+    height: 100vh;
+    width: 100vw;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+#div2 div img {
+    height: 300px;
+    width: 300px;
+}
+#div2 div h1 {
+    margin: 30px auto auto 30px;
+}
+#div2 div p {
+    line-height: 2;
+    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+}
+#div3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 0px 10% 0px;
+    background-color: rgb(26, 51, 131);
+}
+#skillTitle {
+    width: 100%;
+    padding: 50px;
+}
+.skillsWrap {
+    display: inline;
+}
+.skills {
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.15);
+    width: 30%;
+    margin: 5px 5px 20px;
+    padding: 25px;
+    height: auto;
+    display: inline-block;
+    border-radius: 5px;
+}
+.skills img {
+    width: 50%;
+    height: auto;
+}
+.skills p, .skills h2 {
+    margin-top: 15px;
+}
+#div4 {
+    background: url("img/computer2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+#div4 h1 {
+    text-shadow: 1px, 1px, 3px rgba(3, 3, 1);
+    margin: 15px;
+    font-size: 3rem;
+}
+#div4 p {
+    text-shadow: 1px, 1px, 3px rgba(3, 3, 1);
+    margin: 15px;
+    font-size: 2rem ;
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+}
+form {
+    padding: 10px;
+}
+form input, form textarea, button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: gray;
+}
+form button:hover {
+    background-color: gray;
+    color:white;
+    border: none;
+    transform: scale(1.01);
+}
+form button {
+    transition: background-color 0.3s;
+}
+@media (max-width: 600px) {
+    .skills {
+        width: 70vw;
+    }
+    .skillsWrap {
+        overflow: auto;
+    }
+    #div h1 {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 450px) {
+    #div2 div p {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+}
+@media (max-width: 350) {
+    #div2 div p {
+        font-size: 1rem;
+        line-height: normal;
+    }
+}
